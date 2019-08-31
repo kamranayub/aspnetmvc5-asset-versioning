@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>AspNet.Mvc.AssetVersioning</id>
+    <version>1.0.527</version>
+    <authors>kayub</authors>
+    <owners>kayub</owners>
+    <licenseUrl>http://https://github.com/kamranayub/aspnetmvc5-asset-versioning</licenseUrl>
+    <projectUrl>https://github.com/kamranayub/aspnetmvc5-asset-versioning</projectUrl>    
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Url Helper extension to get versioned content asset URLs</description>
+    <copyright>Copyright 2019</copyright>
+    <tags>aspnet aspnet-mvc asset-versioning version url</tags>
+    <dependencies>
+      <dependency id="Microsoft.AspNet.Mvc" version="5.2.7" />
+    </dependencies>
+  </metadata>
+</package>
