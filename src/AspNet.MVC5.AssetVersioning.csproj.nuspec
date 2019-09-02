@@ -5,7 +5,7 @@
     <version>1.0.527</version>
     <authors>kayub</authors>
     <owners>kayub</owners>
-    <licenseUrl>http://https://github.com/kamranayub/aspnetmvc5-asset-versioning</licenseUrl>
+    <licenseUrl>https://github.com/kamranayub/aspnetmvc5-asset-versioning</licenseUrl>
     <projectUrl>https://github.com/kamranayub/aspnetmvc5-asset-versioning</projectUrl>    
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Url Helper extension to get versioned content asset URLs</description>
