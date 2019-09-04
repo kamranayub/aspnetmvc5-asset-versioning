@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>AspNet.Mvc.AssetVersioning</id>
-    <version>1.0.527</version>
+    <version>1.1.527</version>
     <authors>kayub</authors>
     <owners>kayub</owners>
     <licenseUrl>https://github.com/kamranayub/aspnetmvc5-asset-versioning</licenseUrl>

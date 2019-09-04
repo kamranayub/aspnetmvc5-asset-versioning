@@ -10,26 +10,29 @@ namespace System.Web.Mvc.AssetVersioning
     {
         public static string AppendVersion(string contentUrl, string version)
         {
-            var url = new UriBuilder(contentUrl);
-            if (url.Query != null && url.Query.Length > 1)
-                url.Query = url.Query.Substring(1) + "&" + version;
+            if (contentUrl.Contains("?"))
+            {
+                return contentUrl + "&" + version;
+            }
             else
-                url.Query = version;
-
-            return url.Uri.GetComponents(UriComponents.Scheme | UriComponents.Host | UriComponents.PathAndQuery, UriFormat.Unescaped);
+            {
+                return contentUrl + "?" + version;
+            }
         }
 
-        public static string VersionedContent(this UrlHelper helper, string assetPath)
+        public static string VersionedContent(this UrlHelper helper, string contentPath)
         {
-            var fullPath = helper.RequestContext.HttpContext.Server.MapPath(assetPath);
+            var fullPath = helper.RequestContext.HttpContext.Server.MapPath(contentPath);
             var version = AssetVersionCache.GetOrAddCachedVersion(fullPath, helper.RequestContext.HttpContext.Cache);
 
-            if (version != null) { 
+            if (version != null)
+            {
+                var relativePath = helper.Content(contentPath);
                 // append hash to query string
-                return Extensions.AppendVersion(helper.Content(assetPath), version);
+                return AppendVersion(relativePath, version);
             }
 
-            return helper.Content(assetPath);
+            return helper.Content(contentPath);
         }
     }
 }

@@ -16,18 +16,18 @@ namespace AspNet.MVC5.AssetVersioning.Tests
         public void AppendVersion_Should_Append_To_Empty_Url()
         {
             
-            var path = Extensions.AppendVersion("https://foo.com/test.js", "123");
+            var path = Extensions.AppendVersion("/test.js", "123");
             
-            Assert.AreEqual("https://foo.com/test.js?123", path);
+            Assert.AreEqual("/test.js?123", path);
         }
 
         [TestMethod]
         public void AppendVersion_Should_Append_To_Existing_Url()
         {
 
-            var path = Extensions.AppendVersion("https://foo.com/test.js?h=foo", "123");
+            var path = Extensions.AppendVersion("/test.js?h=foo", "123");
 
-            Assert.AreEqual("https://foo.com/test.js?h=foo&123", path);
+            Assert.AreEqual("/test.js?h=foo&123", path);
         }
 
         [TestMethod]
