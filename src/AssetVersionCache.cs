@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
@@ -34,7 +35,8 @@ namespace System.Web.Mvc.AssetVersioning
             {
                 using (var sha256 = SHA256.Create())
                 {
-                    return Convert.ToBase64String(sha256.ComputeHash(stream));
+                    return BitConverter.ToString(sha256.ComputeHash(stream))
+                        .Replace("-", "").ToLower();
                 }
             }
         }

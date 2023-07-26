@@ -35,7 +35,7 @@ namespace AspNet.MVC5.AssetVersioning.Tests
         {
             var hash = AssetVersionCache.ComputeHash("test.txt");
 
-            Assert.AreEqual("5b9VrKRrgLl2zwVdUOwhwihZ2cwlYdjQTqgEVV+G624=", hash);
+            Assert.AreEqual("e5bf55aca46b80b976cf055d50ec21c22859d9cc2561d8d04ea804555f86eb6e", hash);
         }
 
         [TestMethod]
@@ -48,7 +48,7 @@ namespace AspNet.MVC5.AssetVersioning.Tests
 
             Assert.AreEqual(1, cache.Count);
             Assert.AreEqual(1, assetCache.Count);
-            Assert.AreEqual("5b9VrKRrgLl2zwVdUOwhwihZ2cwlYdjQTqgEVV+G624=", assetCache["test.txt"]);
+            Assert.AreEqual("e5bf55aca46b80b976cf055d50ec21c22859d9cc2561d8d04ea804555f86eb6e", assetCache["test.txt"]);
             Assert.AreEqual(hash, assetCache["test.txt"]);
 
             var cachedHash = AssetVersionCache.GetOrAddCachedVersion("test.txt", cache);
