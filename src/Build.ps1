@@ -1,1 +1,1 @@
-﻿& '..\..\..\tools\nuget.exe' --% pack ../../AspNet.MVC5.AssetVersioning.csproj
+﻿& 'nuget.exe' --% pack AspNet.MVC5.AssetVersioning.csproj
